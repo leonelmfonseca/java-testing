@@ -13,12 +13,13 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Junit Jupiter Annotations demo</name>
 	<description>Demo project for Spring Boot</description>
-	<url/>
-	<licenses>
-		<license/>
-	</licenses>
 	<developers>
-		<developer/>
+		<developer>
+			<id>leonelmateusfonseca</id>
+			<name>Leonel Mateus Fonseca</name>
+			<email>leonelfonseca@gmail.com</email>
+			<url>https://github.com/leonelmfonseca</url>
+		</developer>
 	</developers>
 	<scm>
 		<connection/>
@@ -28,6 +29,11 @@
 	</scm>
 	<properties>
 		<java.version>17</java.version>
+		<!-- It's a good practice to use property names that are consistent and clear,
+        using hyphens (-) in property names is not standard in Maven.
+        Instead, use camelCase or underscores. -->
+		<lombok.version>1.18.36</lombok.version>
+		<datafaker.version>2.4.2</datafaker.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -40,13 +46,37 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- Lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
+			<optional>true</optional>
+		</dependency>
+
+		<dependency>
+			<groupId>net.datafaker</groupId>
+			<artifactId>datafaker</artifactId>
+			<version>${datafaker.version}</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
 		<plugins>
+			<!-- Spring Boot Maven Plugin -->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
