@@ -1,0 +1,159 @@
+### Build Artifacts ###
+target/
+bin/
+build/
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+*.zip
+*.tar.gz
+*.rar
+*.ctxt
+*.stackdump
+dependency-reduced-pom.xml
+pom.xml.*
+release.properties
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+mvnw
+mvnw.cmd
+.mtj.tmp/
+hs_err_pid*
+
+### IDEs ###
+# Eclipse
+.metadata
+.settings/
+.loadpath
+.recommenders
+.externalToolBuilders/
+*.launch
+*.pydevproject
+.cproject
+.autotools
+.factorypath
+.buildpath
+.target
+.tern-project
+.texlipse
+.springBeans
+.apt_generated/
+.cache-main
+.scala_dependencies
+.worksheet
+.project
+.classpath
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# VS Code
+.vscode/
+
+# STS (Spring Tool Suite)
+.sts4-cache/
+
+### Git ###
+*.orig
+*.BACKUP.*
+*.BASE.*
+*.LOCAL.*
+*.REMOTE.*
+*_BACKUP_*.txt
+*_BASE_*.txt
+*_LOCAL_*.txt
+*_REMOTE_*.txt
+.gitattributes
+
+### Operating Systems ###
+# Windows
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# macOS
+*.DS_Store
+
+### Docker ###
+# Ignore Docker Compose files (if not version-controlled)
+# docker-compose.override.yml
+# docker-compose.prod.yml
+
+# Ignore Docker build artifacts
+# **/docker-compose*.yml
+# **/Dockerfile
+# **/.dockerignore
+
+### Kubernetes ###
+# Ignore Kubernetes configuration files (if not version-controlled)
+*.kubeconfig
+# *.yaml
+# *.yml
+
+### Angular ###
+# Ignore Angular build artifacts
+dist/
+node_modules/
+.cache/
+.angular/
+
+# Ignore environment files (if not version-controlled)
+src/environments/environment.ts
+src/environments/environment.prod.ts
+
+### Python ###
+# Ignore Python virtual environments
+.venv/
+venv/
+env/
+
+# Ignore Python cache and build artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+### Redis ###
+# Ignore Redis dump files
+dump.rdb
+
+### Logs and Temporary Files ###
+*.log
+*.tmp
+*.temp
+*.pid
+*.pid.lock
+
+### Miscellaneous ###
+*.bak
+*.swp
+*~.nib
+local.properties
+*.sublime-*
+/scratch
+.gradle
+README.html
+.exercism
+/qodana.yaml
