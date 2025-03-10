@@ -61,7 +61,9 @@ class BankAccountImplTest {
 
   /* Dynamic tests are advantageous in scenarios requiring flexibility, such as data-driven testing, iterative validation,
   real-time data handling, combinatorial testing, or robustness checks like error injection(wide range of unexpected, malformed, or edge-case inputs).
-  They simplify generating tests for varying inputs, combinations, or external data at runtime, reducing redundancy and improving adaptability.*/
+  They simplify generating tests for varying inputs, combinations, or external data at runtime, reducing redundancy and improving adaptability.
+  Are generated @ runtime
+  */
 
   @TestFactory
   Stream<DynamicTest> dynamicDepositTests() {
