@@ -7,8 +7,12 @@ import java.util.Objects;
 
 public record Transaction(
     long id, double amount, double balanceAfterTransaction, Instant transactionDate) {
-
-  private static final ObjectMapper MAPPER = new ObjectMapper();
+  
+  // The Jackson library, by default, does not know how to handle the java.time.Instant (and other Java 8 date/time classes).
+  // To resolve this issue, you need to register the JavaTimeModule from the jackson-datatype-jsr310 module,
+  // which provides serializers and deserializers for Java 8 date/time types.
+  private static final ObjectMapper MAPPER =
+          SimpleObjectMapper.create();
 
 
   @Override
