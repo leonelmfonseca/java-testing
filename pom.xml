@@ -34,6 +34,7 @@
         Instead, use camelCase or underscores. -->
 		<lombok.version>1.18.36</lombok.version>
 		<datafaker.version>2.4.2</datafaker.version>
+		<jackson.core.databind.version>2.18.3</jackson.core.databind.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -61,6 +62,19 @@
 			<version>${datafaker.version}</version>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson.core.databind.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.datatype</groupId>
+			<artifactId>jackson-datatype-jsr310</artifactId>
+			<version>${jackson.core.databind.version}</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
