@@ -1,6 +1,5 @@
 package com.developer.simpledemo.javatesting.jupiterannotations.bankaccount;
 
-import com.developer.simpledemo.javatesting.jupiterannotations.utils.SimpleObjectMapper;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
 import java.time.Instant;
@@ -9,8 +8,8 @@ import java.util.Objects;
 public record Transaction(
     long id, double amount, double balanceAfterTransaction, Instant transactionDate) {
 
-  private static final ObjectMapper MAPPER =
-      SimpleObjectMapper.create(); // Reuse ObjectMapper instance
+  private static final ObjectMapper MAPPER = new ObjectMapper();
+
 
   @Override
   public boolean equals(Object obj) {
