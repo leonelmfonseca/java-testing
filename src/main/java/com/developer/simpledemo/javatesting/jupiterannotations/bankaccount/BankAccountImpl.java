@@ -10,8 +10,8 @@ import lombok.ToString;
 
 @ToString
 public class BankAccountImpl implements BankAccount {
-    private final List<Transaction> transactions;
     private double balance;
+    private final List<Transaction> transactions;
 
     public BankAccountImpl(double initialBalance) {
         if (initialBalance < 0) {
